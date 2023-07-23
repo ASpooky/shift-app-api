@@ -7,6 +7,7 @@ type Shift struct {
 	StartTime time.Time `json:"starttime" gorm:"not null"`
 	EndTime   time.Time `json:"endtime" gorm:"not null"`
 	UpdateAt  time.Time `json:"updated_at"`
+	CreatedAt time.Time `json:"created_at"`
 	User      User      `json:"user" gorm:"foreignKey:UserId; constraint:OnDelete:CASCADE"`
 	UserId    uint      `json:"user_id" gorm:"not null"`
 }

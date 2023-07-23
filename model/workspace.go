@@ -12,7 +12,7 @@ type Workspace struct {
 }
 
 type WorkspaceResponse struct {
-	ID        string    `json:"id" gorm:"primaryKey"`
+	ID        uint      `json:"id" gorm:"primaryKey"`
 	Name      string    `json:"name" gorm:"unique"`
 	CreatedAt time.Time `json:"created_at"`
 	UpdateAt  time.Time `json:"updated_at"`
